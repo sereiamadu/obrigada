@@ -26,9 +26,10 @@
 
   <script>
     const video = document.getElementById('video');
+
     video.onended = () => {
-      // Redireciona para o Instagram após o vídeo
-      window.location.href = 'https://www.instagram.com/sereia_madu';
+      event.preventDefault(); // Prevent default redirection
+      alert("Obrigada pela visita!"); 
     };
   </script>
 </body>
