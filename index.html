@@ -2,83 +2,81 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Obrigada pela visita</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">	
+  <title>Obrigada pela visita</title>	
   <style>
-    body, html {
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-      background: black;
-    }
-    video {
-      width: 100vw;
-      height: 100vh;
-      object-fit: cover;
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
-    .overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black overlay */
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-    }
-    .overlay h1 {
-      color: white;
-      font-size: 2em;
-      margin-bottom: 20px;
-    }
-    .overlay button {
-      background-color: #007bff;
-      color: white;
-      padding: 15px 30px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-  </style>
-</head>
-<body>
-  <video id="video" controls playsinline>
-    <source src="thanks.mp4" type="video/mp4">
-    Seu navegador não suporta vídeos HTML5.
-  </video>
-
-  <div class="overlay">
-    <h1>Siga-me no TikTok</h1>
-    <button onclick="redirectToTikTok()">Seguir</button>
-    <img src="logoacqua.png" alt="Logo acquamundo" width="50%">
-    <h1>Siga o perfil do Aquário</h1>
-    <button onclick="redirectToInstagramAcqua()">Seguir</button>
-  </div>
-
-  <script>
-    const video = document.getElementById('video');
-    const overlay = document.querySelector('.overlay');
-
-    video.addEventListener('ended', () => {
-      video.style.display = 'none';
-      overlay.style.display = 'flex';
-      window.location.href = 'https://www.instagram.com/sereia_madu';
-    });
-
-    function redirectToTikTok() {
-      window.location.href = 'https://www.tiktok.com/@sereia_madu';
-    }
-
-    function redirectToInstagramAcqua() {
-      window.location.href = 'https://www.instagram.com/acquamundo';
-    }
-    
-  </script>
-</body>
+    body, html {	
+      margin: 0;	
+      padding: 0;	
+      overflow: hidden;	
+      background: black;	
+    }	
+    video {	
+      width: 100vw;	
+      height: 100vh;	
+      object-fit: cover;	
+      position: absolute;	
+      top: 0;	
+      left: 0;	
+    }	
+    .overlay {	
+      position: absolute;	
+      top: 0;	
+      left: 0;	
+      width: 100%;	
+      height: 100%;	
+      background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black overlay */	
+      display: none;
+      justify-content: center;	
+      align-items: center;	
+      text-align: center;	
+    }	
+    .overlay h1 {	
+      color: white;	
+      font-size: 2em;	
+      margin-bottom: 20px;	
+    }	
+    .overlay button {	
+      background-color: #007bff;	
+      color: white;	
+      padding: 15px 30px;	
+      border: none;	
+      border-radius: 5px;	
+      cursor: pointer;	
+    }	
+  </style>	
+</head>	
+<body>	
+  <video id="video" controls playsinline>	
+    <source src="thanks.mp4" type="video/mp4">	
+    Seu navegador não suporta vídeos HTML5.	
+  </video>	
+	
+  <div class="overlay">	
+    <h1>Siga-me no TikTok</h1>	
+    <button onclick="redirectToTikTok()">Seguir</button>	
+    <h1>Siga o perfil do Aquário</h1>	
+    <button onclick="redirectToInstagramAcqua()">Seguir</button>	
+  </div>	
+	
+  <script>	
+    const video = document.getElementById('video');	
+    const overlay = document.querySelector('.overlay');	
+	
+    video.addEventListener('ended', () => {	
+      video.style.display = 'none';	
+      overlay.style.display = 'flex';	
+      window.location.href = 'https://www.instagram.com/sereia_madu';	
+    });	
+	
+    function redirectToTikTok() {	
+      window.location.href = 'https://www.tiktok.com/@sereia_madu';	
+    }	
+	
+    function redirectToInstagramAcqua() {	
+      window.location.href = 'https://www.instagram.com/acquamundo';	
+    }	
+	
+  </script>	
+</body>	
 </html>
