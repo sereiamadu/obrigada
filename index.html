@@ -35,8 +35,6 @@
       color: white;	
       font-size: 2em;	
       margin-bottom: 20px;
-      display: flex;
-      flex-direction: column;
     }	
     .overlay button {	
       background-color: #007bff;	
@@ -45,14 +43,10 @@
       border: none;	
       border-radius: 5px;	
       cursor: pointer;
-      display: flex;
-      flex-direction: column;
     }
     .overlay img {
       margin-top: 20px;
       margin-bottom: 20px;
-      display: flex;
-      flex-direction: column;
     }
   </style>	
 </head>	
@@ -76,7 +70,8 @@
 	
     video.addEventListener('ended', () => {	
       video.style.display = 'none';	
-      overlay.style.display = 'flex';	
+      overlay.style.display = 'flex';
+      overlay.style.flex-direction = 'column';
       window.location.href = 'https://www.instagram.com/sereia_madu';	
     });	
 	
